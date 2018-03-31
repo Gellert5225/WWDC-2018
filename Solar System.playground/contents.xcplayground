@@ -11,6 +11,6 @@
         <page name='Saturn'/>
         <page name='Uranus'/>
         <page name='Neptune'/>
-        <page name='Solar System'/>
+        <page name='SolarSystem'/>
     </pages>
 </playground>

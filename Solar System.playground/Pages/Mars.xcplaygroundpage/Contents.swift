@@ -10,7 +10,7 @@ import UIKit
 import SceneKit
 import PlaygroundSupport
 
-PlaygroundPage.current.liveView = PlanetViewController(withPlanetName: "Mars", diffuse: UIImage(named: "mars.jpg")!, specular: nil, emission: nil, normal: nil, size: 1.5)
+PlaygroundPage.current.liveView = PlanetViewController(withPlanetName: "Mars", diffuse: UIImage(named: "mars.jpg")!, specular: nil, emission: nil, normal: UIImage(named: "mars_norm.jpg"), size: 1.5)
 PlaygroundPage.current.needsIndefiniteExecution = true
 
 /*:

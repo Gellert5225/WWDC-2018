@@ -5,7 +5,7 @@
 
  Our solar system is located in the Orion Arm, which is a minor arm of the giant spiral galaxy –––– **The Milky Way**
  
- Solar system consists of an average star: the sun, and 8 planets: [Mercury](Mercury), Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune.
+[Solar System](SolarSystem) consists of an average star: the [Sun](Sun), and 8 planets: [Mercury](Mercury), [Venus](Venus), [Earth](Earth), [Marse](Mars), [Jupiter](Jupiter), [Saturn](Saturn), [Uranus](Uranus) and [Neptune](Neptune).
  
  All planets revolves around the sun in nearly circular orbits. The axis of rotation most planets are nearly perpendicular to the ecliptic, with the exception of Uranus, whose axis is almost parallel to the ecliptic.
  
@@ -27,9 +27,9 @@
 //: -
 
 /*:
- Each playground page consists of a `PlanetViewController` and a `PlanetScene`. The `PlanetViewController` contains all the buttons and labels, and the `PlanetScene` contains the 3D model, texture and particle system.
+ Each playground page consists of a subclass of `PlanetViewController` and a subclass of `PlanetScene`. The `PlanetViewController` contains all the buttons and labels, and the `PlanetScene` contains the 3D model, texture and particle system.
 
- Inside `PlanetViewController`, there is also a struct for creating Planet object from a JSON file.
+ Inside `PlanetViewController`, there is also a struct for obtaining Planet information from a JSON file.
 
  For more details, please see the source file on a Mac.
  */
