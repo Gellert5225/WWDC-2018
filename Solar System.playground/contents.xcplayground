@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='Introduction'/>
+        <page name='Sun'/>
+        <page name='Mercury'/>
+        <page name='Venus'/>
+        <page name='Earth'/>
+        <page name='Mars'/>
+        <page name='Jupiter'/>
+        <page name='Saturn'/>
+        <page name='Uranus'/>
+        <page name='Neptune'/>
+        <page name='Solar System'/>
+    </pages>
+</playground>
