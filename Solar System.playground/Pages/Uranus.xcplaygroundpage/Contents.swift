@@ -1,5 +1,11 @@
 //: Back to [Saturn](@previous)
 
+/*:
+ In this page you will explore the characteristics of Uranus.
+ 
+ Hit `Run My Code` to view the 3D model
+ */
+
 import UIKit
 import SceneKit
 import PlaygroundSupport

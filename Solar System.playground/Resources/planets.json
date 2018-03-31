@@ -1,43 +1,43 @@
 [{
     "name": "Jupiter",
-    "mass": "317.8🌍",
-    "diameter": "11🌍",
-    "distancetoearth": "588 million KM",
+    "mass": "317.8 x 🌍",
+    "diameter": "11 x 🌍",
+    "distancetoearth": "588 million KM to 🌍",
     "funfacts": "Jupiter is the larges planet in Solar System. It also has a very faint ring system."
  }, {
      "name": "Saturn",
-     "mass": "95.2🌍",
-     "diameter": "9.4🌍",
-     "distancetoearth": "1.2 billion KM",
+     "mass": "95.2 x 🌍",
+     "diameter": "9.4 x 🌍",
+     "distancetoearth": "1.2 billion KM to 🌍",
      "funfacts": "Saturn is the most beautiful planet in Solar System because of its ring system. The entire planet will float on water!"
  },{
      "name": "Uranus",
-     "mass": "14.5🌍",
-     "diameter": "4🌍",
-     "distancetoearth": "2.6 billion KM",
+     "mass": "14.5 x 🌍",
+     "diameter": "4 x 🌍",
+     "distancetoearth": "2.6 billion KM to 🌍",
      "funfacts": "Uranus is the only planet that has a rotational axis almost parallel to the ecliptic."
  },{
      "name": "Neptune",
-     "mass": "17.1🌍",
-     "diameter": "3.8🌍",
-     "distancetoearth": "4.3 billion KM",
+     "mass": "17.1 x 🌍",
+     "diameter": "3.8 x 🌍",
+     "distancetoearth": "4.3 billion KM to 🌍",
      "funfacts": "Neptune has the strongest wind on its surface."
  },{
      "name": "Mercury",
-     "mass": "1/18🌍",
-     "diameter": "0.38🌍",
-     "distancetoearth": "77 million KM",
+     "mass": "1/18 x 🌍",
+     "diameter": "0.38 x 🌍",
+     "distancetoearth": "77 million KM to 🌍",
      "funfacts": "Neptune has the strongest wind on its surface."
  },{
      "name": "Venus",
-     "mass": "0.81🌍",
-     "diameter": "0.95🌍",
-     "distancetoearth": "40 million KM",
+     "mass": "0.81 x 🌍",
+     "diameter": "0.95 x 🌍",
+     "distancetoearth": "40 million KM to 🌍",
      "funfacts": "Venus is hotter than Mercury due to the dense atmosphere which is basically a green house effect."
  },{
      "name": "Mars",
-     "mass": "0.1🌍",
-     "diameter": "0.5🌍",
-     "distancetoearth": "54 million KM",
+     "mass": "0.1 x 🌍",
+     "diameter": "0.5 x 🌍",
+     "distancetoearth": "54 million KM to 🌍",
      "funfacts": "Mars has the tallest mountain in Solar System."
  }]

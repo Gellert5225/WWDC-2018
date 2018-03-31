@@ -1,5 +1,11 @@
 //: Back to [Mercury](@previous)
 
+/*:
+ In this page you will explore the characteristics of Venus.
+ 
+ Hit `Run My Code` to view the 3D model
+ */
+
 import UIKit
 import SceneKit
 import PlaygroundSupport

@@ -1,5 +1,11 @@
 //: Back to [Earth](@previous)
 
+/*:
+ In this page you will explore the characteristics of Mars.
+ 
+ Hit `Run My Code` to view the 3D model
+ */
+
 import UIKit
 import SceneKit
 import PlaygroundSupport

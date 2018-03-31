@@ -1,5 +1,14 @@
 //: Back to [Neptune](@previous)
 
+/*:
+ In this page you will explore the entire Solar System in Augmented Reality.
+ 
+ Hit `Run My Code` to space travel.
+ 
+ * Callout(Tips):
+ You can change the universe constants to play around with the Solar System, for example, change the MULTIPLIER to a smaller number to give planets higher rotational speed.
+ */
+
 import SceneKit
 import ARKit
 import UIKit
