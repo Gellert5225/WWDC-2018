@@ -2,11 +2,11 @@ import UIKit
 import SceneKit
 import PlaygroundSupport
 
-public class PlanetViewController: UIViewController {
+open class PlanetViewController: UIViewController {
     var sceneView = SCNView()
     var planetScene: PlanetScene!
     var button: CornerButton!
-    var planetName: String!
+    open var planetName: String!
     
     var titleLabel: DetailLabel!
     var massLabel: DetailLabel!
@@ -17,7 +17,11 @@ public class PlanetViewController: UIViewController {
     
     var shouldShowDetail = true
     
-    var planet: Planet?
+    open var planet: Planet?
+    
+    public init() {
+        super.init(nibName: nil, bundle: nil)
+    }
     
     public init(withPlanetName name: String, diffuse: UIImage, specular: UIImage?, emission: UIImage?, normal: UIImage?, size: CGFloat) {
         super.init(nibName: nil, bundle: nil)
@@ -32,7 +36,7 @@ public class PlanetViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func addLabels() {
+    open func addLabels() {
         titleLabel = DetailLabel()
         massLabel = DetailLabel()
         diameterLabel = DetailLabel()
@@ -91,7 +95,7 @@ public class PlanetViewController: UIViewController {
         NSLayoutConstraint.activate([titleLabelTopConstraint, titleLabelCenter, massLabelCenter, massLabelTopConstraint, diameterLabelTopConstraint, diameterLabelCenter, distanceLabelCenter, distanceLabelTopConstraint, factDetailLabelCenter, factDetailLabelTopConstraint, factLabelCenter, factLabelTopConstraint, factDetailLabelWidth])
     }
     
-    override public func loadView() {
+    override open func loadView() {
         self.view = sceneView
         sceneView.scene = planetScene
         sceneView.backgroundColor = UIColor.black
@@ -102,7 +106,7 @@ public class PlanetViewController: UIViewController {
         }
     }
     
-    func addButton() {
+    open func addButton() {
         button = CornerButton(withTitle: "Did You Know?")
         button.addTarget(self, action: #selector(showDetail), for: .touchUpInside)
         
@@ -127,14 +131,14 @@ public class PlanetViewController: UIViewController {
     }
 }
 
-struct Planet {
-    var name: String!
-    var mass: String!
-    var diameter: String!
-    var distance: String!
-    var fact: String!
+public struct Planet {
+    public var name: String!
+    public var mass: String!
+    public var diameter: String!
+    public var distance: String!
+    public var fact: String!
     
-    init(withName name: String) {
+    public init(withName name: String) {
         let url = Bundle.main.url(forResource: "planets", withExtension: "json")
         let data = try! Data(contentsOf: url!)
         

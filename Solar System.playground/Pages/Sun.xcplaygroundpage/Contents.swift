@@ -10,35 +10,36 @@ import UIKit
 import SceneKit
 import PlaygroundSupport
 
-class SunViewController: UIViewController {
+class SunViewController: PlanetViewController {
     var sceneView = SCNView()
-    var sunScene = SunScene(create: true) // see source file for implementation
+    var sunScene = SunScene(with: UIColor(red: 1, green: 0xD0/255.0, blue: 0x15/255.0, alpha: 1), specular: UIColor.black, emission: UIColor(red: 1, green: 0xD0/255.0, blue: 0x15/255.0, alpha: 1), normal: UIImage(named: "Ground.png")!, size: 1, name: "Sun")
     
     var button: CornerButton!
+    
+    init(create: Bool) {
+        super.init()
+        
+        self.planetName = "Sun"
+        self.planet = Planet(withName: "Sun")
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func loadView() {
         self.view = sceneView
         sceneView.scene = sunScene
         sceneView.backgroundColor = UIColor.black
         
-        addButton()
-    }
-    
-    func addButton() {
-        button = CornerButton(withTitle: "Did You Know?")
-        button.addTarget(self, action: #selector(showDetail), for: .touchUpInside)
-        
-        self.view.addSubview(button)
-        
-        button.addButtonConstraint()
-    }
-    
-    @objc func showDetail() {
-        
+        if planetName != "Earth" {
+            addButton()
+            addLabels()
+        }
     }
 }
 
-PlaygroundPage.current.liveView = SunViewController()
+PlaygroundPage.current.liveView = SunViewController(create: true)
 PlaygroundPage.current.needsIndefiniteExecution = true
 
 /*:

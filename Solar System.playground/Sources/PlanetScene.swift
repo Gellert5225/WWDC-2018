@@ -1,12 +1,12 @@
 import SceneKit
 
-public class PlanetScene: SCNScene {
+open class PlanetScene: SCNScene {
     
-    var pname: String!
+    open var planetName: String!
     
     public convenience init(with diffuse: UIImage, specular: UIImage?, emission: UIImage?, normal: UIImage?, size: CGFloat, name: String) {
         self.init()
-        pname = name
+        planetName = name
         setupCameraAndLights()
         
         let planet = SCNSphere(radius: size)
@@ -45,7 +45,7 @@ public class PlanetScene: SCNScene {
         rootNode.addParticleSystem(particleStars)
     }
     
-    func setupCameraAndLights() {
+    open func setupCameraAndLights() {
         
         let cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
@@ -53,7 +53,7 @@ public class PlanetScene: SCNScene {
         cameraNode.position = SCNVector3(x: 0, y: 0, z: 0)
         cameraNode.pivot = SCNMatrix4MakeTranslation(0, 0, -8)
         
-        if pname != "Saturn" {
+        if planetName != "Saturn" {
             cameraNode.runAction(SCNAction.repeatForever(SCNAction.rotate(by: CGFloat.pi * 2, around: SCNVector3(0,1,0), duration: 10)))
         }
         

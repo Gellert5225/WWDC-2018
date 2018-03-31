@@ -1,17 +1,19 @@
 import SceneKit
 
-public class SunScene: SCNScene {
+public class SunScene: PlanetScene {
     
-    public convenience init(create:Bool) {
+    public convenience init(with diffuse: UIColor, specular: UIColor, emission: UIColor, normal: UIImage, size: CGFloat, name: String) {
         self.init()
+        
+        self.planetName = name
         
         setupCameraAndLights()
         
-        let sun = SCNSphere(radius: 1)
-        sun.firstMaterial!.diffuse.contents = UIColor(red: 1, green: 0xD0/255.0, blue: 0x15/255.0, alpha: 1)
-        sun.firstMaterial!.normal.contents = UIImage(named: "Ground.png")
-        sun.firstMaterial!.specular.contents = UIColor.black
-        sun.firstMaterial!.emission.contents = UIColor(red: 1, green: 0xD0/255.0, blue: 0x15/255.0, alpha: 1)
+        let sun = SCNSphere(radius: size)
+        sun.firstMaterial!.diffuse.contents = diffuse
+        sun.firstMaterial!.normal.contents = normal
+        sun.firstMaterial!.specular.contents = specular
+        sun.firstMaterial!.emission.contents = emission
         
         let sunlight = SCNLight()
         sunlight.type = SCNLight.LightType.omni
@@ -31,32 +33,6 @@ public class SunScene: SCNScene {
         
         guard let particleStars = SCNParticleSystem(named: "starDust.scnp", inDirectory: "") else { return }
         rootNode.addParticleSystem(particleStars)
-        
-    }
-    
-    func setupCameraAndLights() {
-        
-        let cameraNode = SCNNode()
-        cameraNode.camera = SCNCamera()
-        cameraNode.camera!.usesOrthographicProjection = false
-        cameraNode.position = SCNVector3(x: 0, y: 0, z: 0)
-        cameraNode.pivot = SCNMatrix4MakeTranslation(0, 0, -8)
-        
-        cameraNode.runAction(SCNAction.repeatForever(SCNAction.rotate(by: CGFloat.pi * 2, around: SCNVector3(0,1,0), duration: 10)))
-        
-        self.rootNode.addChildNode(cameraNode)
-        
-        let lightNodeSpot = SCNNode()
-        lightNodeSpot.light = SCNLight()
-        lightNodeSpot.light!.type = SCNLight.LightType.spot
-        lightNodeSpot.position = SCNVector3(x: 30, y: 30, z: 30)
-        
-        let empty = SCNNode()
-        empty.position = SCNVector3(x: 10, y: 4, z: 4)
-        self.rootNode.addChildNode(empty)
-        
-        lightNodeSpot.constraints = [SCNLookAtConstraint(target: empty)]
-        cameraNode.addChildNode(lightNodeSpot)
         
     }
 }
