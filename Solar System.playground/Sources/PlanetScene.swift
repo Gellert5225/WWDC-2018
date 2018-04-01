@@ -36,7 +36,7 @@ open class PlanetScene: SCNScene {
             let ringNode = ringScene.rootNode.childNode(withName: "Circle", recursively: true)!
             ringNode.eulerAngles = SCNVector3Make(Float.pi / 2, 0, 0)
             planetNode.addChildNode(ringNode)
-            //planetNode.runAction(SCNAction.repeatForever(SCNAction.rotate(by: CGFloat.pi * 2, around: SCNVector3(0,-0.3,0), duration: 60)))
+            planetNode.runAction(SCNAction.repeatForever(SCNAction.rotate(by: CGFloat.pi * 2, around: SCNVector3(0,1,tan(0.3)), duration: 6)))
         } else {
             planetNode.runAction(SCNAction.repeatForever(SCNAction.rotate(by: CGFloat.pi * 2, around: SCNVector3(0,1,0), duration: 60)))
         }
@@ -54,7 +54,7 @@ open class PlanetScene: SCNScene {
         cameraNode.pivot = SCNMatrix4MakeTranslation(0, 0, -8)
         
         if planetName != "Saturn" {
-            cameraNode.runAction(SCNAction.repeatForever(SCNAction.rotate(by: CGFloat.pi * 2, around: SCNVector3(0,1,0), duration: 10)))
+            cameraNode.runAction(SCNAction.repeatForever(SCNAction.rotate(by: -CGFloat.pi * 2, around: SCNVector3(0,1,0), duration: 10)))
         }
         
         self.rootNode.addChildNode(cameraNode)

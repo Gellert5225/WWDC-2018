@@ -2,6 +2,8 @@
 
 /*:
  ![Solar System](solar_art.jpg)
+ 
+ *Image source: https://wallhere.com/en/wallpaper/660050*
 
  Our solar system is located in the Orion Arm, which is a minor arm of the giant spiral galaxy –––– **The Milky Way**
  
